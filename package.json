@@ -1,0 +1,59 @@
+{
+  "name": "{{ PROJECT_NAME }}",
+  "version": "1.0.0-0",
+  "description": "{{ PROJECT_DESCRIPTION }}",
+  "author": "Simone Corsi <simonecorsi.dev@gmail.com>",
+  "license": "MIT",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "repository": {
+    "url": "https://github.com/simonecorsi/{{ PROJECT_NAME }}"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "scripts": {
+    "types": "tsc --allowJs -d --emitDeclarationOnly index.js",
+    "test": "tap",
+    "coverage": "tap --coverage-report=html",
+    "prepare": "node prepare.js || echo 'Skipping prepare'"
+  },
+  "keywords": [
+    "github",
+    "nodejs",
+    "javascript",
+    "js",
+    "esnext",
+    "node",
+    "npm"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.2.0",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@saithodev/semantic-release-backmerge": "^2.1.2",
+    "@semantic-release/changelog": "^6.0.0",
+    "@semantic-release/commit-analyzer": "^9.0.1",
+    "@semantic-release/git": "^10.0.0",
+    "@semantic-release/github": "^8.0.6",
+    "@semantic-release/npm": "^9.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.2",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.2",
+    "is-ci": "^3.0.0",
+    "lint-staged": "^13.0.3",
+    "markdown-toc": "^1.2.0",
+    "nyc": "^15.1.0",
+    "prettier": "^2.7.1",
+    "semantic-release": "^19.0.5",
+    "tap": "^16.3.2"
+  }
+}
