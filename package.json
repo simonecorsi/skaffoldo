@@ -1,0 +1,70 @@
+{
+    "name": "inizio",
+    "version": "2.0.0-alpha.0",
+    "description": "🏁 Universal project generator! Recursively copy a template folder while replacing variables in a matter of ms",
+    "author": "Simone Corsi <simonecorsi.dev@gmail.com>",
+    "license": "MIT",
+    "type": "module",
+    "bin": "src/index.js",
+    "types": "index.d.ts",
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "repository": {
+        "url": "https://github.com/simonecorsi/inizio"
+    },
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org"
+    },
+    "scripts": {
+        "types": "tsc --allowJs -d --emitDeclarationOnly index.js",
+        "prepare": "node prepare.js || echo 'Skipping prepare'"
+    },
+    "keywords": [
+        "github",
+        "nodejs",
+        "javascript",
+        "js",
+        "esnext",
+        "node",
+        "npm"
+    ],
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^17.2.0",
+        "@commitlint/config-conventional": "^17.1.0",
+        "@semantic-release/changelog": "^6.0.0",
+        "@semantic-release/commit-analyzer": "^9.0.1",
+        "@semantic-release/git": "^10.0.0",
+        "@semantic-release/github": "^8.0.6",
+        "@semantic-release/npm": "^9.0.1",
+        "@semantic-release/release-notes-generator": "^10.0.2",
+        "eslint": "^8.27.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "husky": "^8.0.2",
+        "is-ci": "^3.0.0",
+        "lint-staged": "^13.0.3",
+        "markdown-toc": "^1.2.0",
+        "prettier": "^2.7.1",
+        "semantic-release": "^19.0.5"
+    },
+    "dependencies": {
+        "fast-glob": "^3.2.4",
+        "pino": "^8.7.0",
+        "pino-pretty": "^9.1.1",
+        "piscina": "^3.2.0",
+        "pump": "^3.0.0",
+        "rimraf": "^3.0.2",
+        "split2": "^4.1.0"
+    },
+    "volta": {
+        "node": "18.12.1"
+    }
+}
