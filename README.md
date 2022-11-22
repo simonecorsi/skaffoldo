@@ -1,22 +1,19 @@
 # skaffoldo
 
+> Recursively copy provided source, while replacing variables (if any).
+
+This project is meant to be used as a **skaffold anything**. Just provide a source directory/file and an output folder and this will walk recursively, when a variables in a file is found matching a variable in your environment, it will logic-lessly be replaced.
+
+## Table of Content
+
 <!-- toc -->
 
-- [About The Project](#about-the-project)
-- [Installation](#installation)
 - [Usage](#usage)
 - [Options](#options)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
 
-<!-- tocstop -->
-
-## About The Project
-
-> This package recursively copy a folder while replacing variables in files!
-
-This project is meant to be used as a skaffold anything and easily
 
 <!-- GETTING STARTED -->
 
