@@ -5,7 +5,7 @@
     "author": "Simone Corsi <simonecorsi.dev@gmail.com>",
     "license": "MIT",
     "type": "module",
-    "bin": "src/index.js",
+    "bin": "./bin/index.js",
     "types": "index.d.ts",
     "engines": {
         "node": ">=18.0.0"
