@@ -1,6 +1,6 @@
 {
     "name": "skaffoldo",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "🏁 Universal project generator! Recursively copy a template folder while replacing variables in a matter of ms",
     "author": "Simone Corsi <simonecorsi.dev@gmail.com>",
     "license": "MIT",

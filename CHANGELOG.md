@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/simonecorsi/skaffoldo/compare/v1.0.1...v1.0.2) (2022-11-22)
+
+
+### Bug Fixes
+
+* readme ([04c13d2](https://github.com/simonecorsi/skaffoldo/commit/04c13d234cc772109cc0a5d5ab8286abf945eeae))
+
 ## [1.0.1](https://github.com/simonecorsi/skaffoldo/compare/v1.0.0...v1.0.1) (2022-11-22)
 
 
