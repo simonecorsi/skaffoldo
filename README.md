@@ -26,7 +26,7 @@ npx skaffoldo --source my-boilerplate --output my-new-project
 
 ## Variables
 
-You can use variables inside your files following this format `{{ MY_VARIABLE }}`, this is a logic-less replace, this is not a template engine. Only variables found in templates are replaced.
+You can use variables inside your files following this format `{{ MY_VARIABLE }}`, this is a logic-less replace, **this is not a template engine**. Only variables found in templates are replaced.
 
 ```sh
 MY_VAR=123 skaffoldo ...
