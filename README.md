@@ -2,7 +2,7 @@
 
 > Recursively copy provided source, while replacing variables (if any).
 
-This project is meant to be used as a **skaffold anything**. Just provide a source directory/file and an output folder and this will walk recursively, when a variables in a file is found matching a variable in your environment, it will logic-lessly be replaced.
+This project is meant to be used as a **skaffold anything**. Just provide a source directory/file and an output folder and this will walk recursively, when a variables in a file is found matching a variable in your environment or in the provided json (optional) it will logic-lessly be replaced.
 
 ## Table of Content
 
@@ -20,7 +20,7 @@ This project is meant to be used as a **skaffold anything**. Just provide a sour
 ## Usage
 
 ```sh
-npx skaffoldo --source my-boilerplate --output my-new-project
+npx skaffoldo --source my-boilerplate --output my-new-project --jsonvars '{"CUSTOM_VAR": "MyValue"}'
 # Enjoy
 ```
 
@@ -42,7 +42,7 @@ MY_VAR=123 skaffoldo ...
 | `--verbose -v` | Add more info to errors |
 | `--dryRun -d` | Output operation to console without writing |
 | `--ignore -i` | Ignore paths, can be used multiple times, eg: `**/.git/**` |
-
+| `--jsonvars -j` | Accept a json with variables in addition to the environment ones |
 
 <!-- CONTRIBUTING -->
 
