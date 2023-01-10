@@ -28,6 +28,15 @@ const render = (data, variables) =>
         return result;
     }, data.toString());
 
+const renderFilePath = (data, variables) =>
+    Object.entries(variables).reduce((rendered, [varname, varvalue]) => {
+        const result = rendered.replace(
+            new RegExp(`\\[ {0,}?${varname}{0,}?\\]`, 'g'),
+            varvalue
+        );
+        return result;
+    }, data.toString());
+
 export default async function Renderer({
     source,
     output,
@@ -40,7 +49,7 @@ export default async function Renderer({
 
     const outpath = path.resolve(
         output,
-        path.relative(path.resolve(source), filepath)
+        path.relative(path.resolve(source), renderFilePath(filepath, env))
     );
 
     if (!config.dryRun) {
