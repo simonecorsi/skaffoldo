@@ -6,6 +6,7 @@
     "license": "MIT",
     "type": "module",
     "bin": "./bin/index.js",
+    "exports": "./src/index.js",
     "types": "index.d.ts",
     "engines": {
         "node": ">=18.0.0"

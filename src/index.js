@@ -1,38 +1,11 @@
 import { performance } from 'node:perf_hooks';
-import { parseArgs, promisify } from 'node:util';
+import { promisify } from 'node:util';
 import path from 'path';
 import { Piscina } from 'piscina';
 import glob from 'fast-glob';
 import rimraf from 'rimraf';
 
 import logger from '../src/logger.js';
-
-const { values: processArgs } = parseArgs({
-    options: {
-        source: {
-            type: 'string',
-            short: 's',
-        },
-        output: {
-            type: 'string',
-            short: 'o',
-        },
-        verbose: {
-            type: 'boolean',
-            default: false,
-        },
-        dryRun: {
-            type: 'boolean',
-            short: 'd',
-            default: false,
-        },
-        ignore: {
-            type: 'string',
-            short: 'i',
-            multiple: true,
-        },
-    },
-});
 
 function launchPool(source, output, filepaths, config, env) {
     const pool = new Piscina({
@@ -53,7 +26,7 @@ function launchPool(source, output, filepaths, config, env) {
     );
 }
 
-async function Main(config = {}, env) {
+export default async function Main(config = {}, env) {
     const startTime = performance.now();
 
     if (!config.dryRun) {
@@ -64,7 +37,7 @@ async function Main(config = {}, env) {
         dot: true,
         onlyFiles: true,
         ignore: ['**/node_modules/**', '**/.git/**'].concat(
-            processArgs.ignore || []
+            config.ignore || []
         ),
     });
 
@@ -92,25 +65,4 @@ async function Main(config = {}, env) {
             2
         )}ms, now go create something!`
     );
-}
-
-try {
-    if (!processArgs.source) {
-        throw new Error('No source directory provided, -s or --source');
-    }
-
-    if (!processArgs.output) {
-        throw new Error('No output folder provided, --output or -o ');
-    }
-
-    process.env.IS_DRY = processArgs.dryRun;
-    await Main(processArgs, { ...process.env });
-    process.exit(0);
-} catch (error) {
-    if (processArgs.verbose) {
-        logger.error(error);
-    } else {
-        logger.error(error.message);
-    }
-    process.exit(1);
 }
