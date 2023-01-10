@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/simonecorsi/skaffoldo/compare/v1.0.3...v1.1.0) (2023-01-10)
+
+
+### Features
+
+* importable programmatically ([5f8bb0e](https://github.com/simonecorsi/skaffoldo/commit/5f8bb0e746485603b1e1f72d5bdf88325455e9c0))
+
 ## [1.0.3](https://github.com/simonecorsi/skaffoldo/compare/v1.0.2...v1.0.3) (2022-11-22)
 
 
