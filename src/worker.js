@@ -1,32 +1,12 @@
-// const { expose, isWorkerRuntime } = require('threads/worker');
-// const path = require('path');
-// const execPromise = require('util').promisify(require('child_process').exec);
-// const logger = require('./logger');
-// const util = require('util');
-// const fs = require('fs');
-// const readFile = util.promisify(fs.readFile);
-// const writeFile = util.promisify(fs.writeFile);
-// const mkdir = util.promisify(fs.mkdir);
-// const stat = util.promisify(fs.stat);
-
 import { EOL } from 'node:os';
 import path from 'node:path';
 import { createReadStream, createWriteStream } from 'node:fs';
 import { stat, mkdir } from 'node:fs/promises';
 import pump from 'pump';
 import split from 'split2';
-import logger from './logger.js';
 
-// This render only existing variables, keeping everything else
-// eg .github ${{ secrets }} won't be replaced if the value is not provided
-const render = (data, variables, delimiterStart = "{{", delimiterEnd = "}}") =>
-    Object.entries(variables).reduce((rendered, [varname, varvalue]) => {
-        const result = rendered.replace(
-            new RegExp(`${delimiterStart} {0,}?${varname} {0,}?${delimiterEnd}`, 'g'),
-            varvalue
-        );
-        return result;
-    }, data.toString());
+import logger from './logger.js';
+import { render } from './utils.js';
 
 export default async function Renderer({
     source,
