@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/simonecorsi/skaffoldo/compare/v1.1.0...v1.2.0) (2023-01-11)
+
+
+### Features
+
+* **bin:** add json vars param ([6c494ec](https://github.com/simonecorsi/skaffoldo/commit/6c494ecd15a0bd715bd22c40fa2e4c67c8c01d9d))
+* handle filenames with variables between brackets ([7edad45](https://github.com/simonecorsi/skaffoldo/commit/7edad452d0f34bc3a8a35bc07106d4d7fe255ada))
+
 # [1.1.0](https://github.com/simonecorsi/skaffoldo/compare/v1.0.3...v1.1.0) (2023-01-10)
 
 
