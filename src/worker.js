@@ -19,10 +19,10 @@ import logger from './logger.js';
 
 // This render only existing variables, keeping everything else
 // eg .github ${{ secrets }} won't be replaced if the value is not provided
-const render = (data, variables) =>
+const render = (data, variables, delimiterStart = "{{", delimiterEnd = "}}") =>
     Object.entries(variables).reduce((rendered, [varname, varvalue]) => {
         const result = rendered.replace(
-            new RegExp(`{{ {0,}?${varname} {0,}?}}`, 'g'),
+            new RegExp(`${delimiterStart} {0,}?${varname} {0,}?${delimiterEnd}`, 'g'),
             varvalue
         );
         return result;
@@ -40,7 +40,7 @@ export default async function Renderer({
 
     const outpath = path.resolve(
         output,
-        path.relative(path.resolve(source), filepath)
+        path.relative(path.resolve(source), render(filepath, env, '\\[', '\\]'))
     );
 
     if (!config.dryRun) {
