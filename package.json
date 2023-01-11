@@ -21,7 +21,8 @@
     "scripts": {
         "types": "tsc --allowJs -d --emitDeclarationOnly index.js",
         "prepare": "node prepare.js || echo 'Skipping prepare'",
-        "test": "c8 --src src --all node --test "
+        "test": "node --test ",
+        "coverage": "c8 --src src --all npm t"
     },
     "keywords": [
         "github",
