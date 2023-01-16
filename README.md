@@ -26,6 +26,8 @@ npx skaffoldo --source my-boilerplate --output my-new-project --jsonvars '{"CUST
 
 ## Variables
 
+> By default variables in the `process.env` will be used, if the flag `--jsonars` is provided with a valid JSON string it will be used instead
+
 You can use variables inside your files or filenames following these formats:
 
 - files: `{{ MY_VARIABLE }}`
