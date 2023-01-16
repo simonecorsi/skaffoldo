@@ -14,7 +14,6 @@ This project is meant to be used as a **skaffold anything**. Just provide a sour
 - [License](#license)
 - [Contact](#contact)
 
-
 <!-- GETTING STARTED -->
 
 ## Usage
@@ -26,14 +25,14 @@ npx skaffoldo --source my-boilerplate --output my-new-project --jsonvars '{"CUST
 
 ## Variables
 
-> By default variables in the `process.env` will be used, if the flag `--jsonars` is provided with a valid JSON string it will be used instead
+> ⚠️ **This is a logic-less replace, this is not a template engine**. Only variables found in templates are replaced.
+
+By default `process.env` will be used, if the flag `--jsonars` is provided with a valid JSON string it will be merge with `process.env` variables.
 
 You can use variables inside your files or filenames following these formats:
 
 - files: `{{ MY_VARIABLE }}`
 - filenames: `[MY_VARIABLE]_filename.ts`
-
-This is a logic-less replace, **this is not a template engine**. Only variables found in templates are replaced.
 
 ```sh
 MY_VAR=123 skaffoldo ...

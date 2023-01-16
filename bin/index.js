@@ -32,8 +32,8 @@ const { values: processArgs } = parseArgs({
         jsonvars: {
             type: 'string',
             short: 'j',
-            multiple: false
-        }
+            multiple: false,
+        },
     },
 });
 
@@ -47,8 +47,10 @@ try {
     }
 
     process.env.IS_DRY = processArgs.dryRun;
-    const jsonVars = processArgs.jsonvars ? JSON.parse(processArgs.jsonvars) : {};
-    
+    const jsonVars = processArgs.jsonvars
+        ? JSON.parse(processArgs.jsonvars)
+        : {};
+
     await Main(processArgs, { ...process.env, ...jsonVars });
     process.exit(0);
 } catch (error) {
