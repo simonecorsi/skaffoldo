@@ -1,5 +1,4 @@
 import { performance } from 'node:perf_hooks';
-import { promisify } from 'node:util';
 import path from 'path';
 import { Piscina } from 'piscina';
 import glob from 'fast-glob';
@@ -30,7 +29,7 @@ export default async function Main(config = {}, env) {
     const startTime = performance.now();
 
     if (!config.dryRun) {
-        await promisify(rimraf)(config.output);
+        await rimraf(config.output);
     }
 
     const filepaths = await glob(`${path.resolve(config.source)}/**/*`, {
