@@ -2,7 +2,7 @@ import { performance } from 'node:perf_hooks';
 import path from 'path';
 import { Piscina } from 'piscina';
 import glob from 'fast-glob';
-import rimraf from 'rimraf';
+import { rimraf } from 'rimraf';
 
 import logger from '../src/logger.js';
 
