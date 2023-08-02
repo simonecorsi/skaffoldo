@@ -63,7 +63,7 @@
         "fast-glob": "^3.2.4",
         "pino": "^8.8.0",
         "pino-pretty": "^10.0.0",
-        "piscina": "^3.2.0",
+        "piscina": "^4.1.0",
         "pump": "^3.0.0",
         "rimraf": "^5.0.0",
         "split2": "^4.1.0"
