@@ -44,7 +44,7 @@
         "@semantic-release/changelog": "^6.0.2",
         "@semantic-release/commit-analyzer": "^11.1.0",
         "@semantic-release/git": "^10.0.0",
-        "@semantic-release/github": "^9.0.3",
+        "@semantic-release/github": "^10.0.2",
         "@semantic-release/npm": "^10.0.3",
         "@semantic-release/release-notes-generator": "^12.1.0",
         "c8": "^9.1.0",
