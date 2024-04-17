@@ -27,7 +27,7 @@ npx skaffoldo --source my-boilerplate --output my-new-project --jsonvars '{"CUST
 
 > ⚠️ **This is a logic-less replace, this is not a template engine**. Only variables found in templates are replaced.
 
-By default `process.env` will be used, if the flag `--jsonars` is provided with a valid JSON string it will be merge with `process.env` variables.
+By default `process.env` will be used, if the flag `--jsonvars` is provided with a valid JSON string it will be merge with `process.env` variables.
 
 You can use variables inside your files or filenames following these formats:
 
