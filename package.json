@@ -57,7 +57,7 @@
         "lint-staged": "^15.2.0",
         "markdown-toc": "^1.2.0",
         "prettier": "^3.0.0",
-        "semantic-release": "^23.0.0"
+        "semantic-release": "^24.0.0"
     },
     "dependencies": {
         "fast-glob": "^3.2.4",
