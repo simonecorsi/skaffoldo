@@ -48,7 +48,7 @@
         "@semantic-release/npm": "^10.0.3",
         "@semantic-release/release-notes-generator": "^12.1.0",
         "c8": "^9.1.0",
-        "eslint": "^8.31.0",
+        "eslint": "^9.9.0",
         "eslint-config-prettier": "^9.0.0",
         "eslint-plugin-node": "^11.1.0",
         "eslint-plugin-prettier": "^5.1.3",
