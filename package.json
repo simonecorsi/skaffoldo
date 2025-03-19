@@ -7,7 +7,7 @@
     "type": "module",
     "bin": "./bin/index.js",
     "exports": "./src/index.js",
-    "types": "index.d.ts",
+    "types": "src/index.d.ts",
     "engines": {
         "node": ">=18.0.0"
     },
@@ -19,8 +19,7 @@
         "registry": "https://registry.npmjs.org"
     },
     "scripts": {
-        "types": "tsc --allowJs -d --emitDeclarationOnly index.js",
-        "prepare": "node prepare.js || echo 'Skipping prepare'",
+        "prepare": "node prepare.mjs || echo 'Skipping prepare'",
         "test": "node --test --experimental-test-coverage --test-reporter=spec"
     },
     "keywords": [
