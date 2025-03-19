@@ -9,7 +9,7 @@
     "exports": "./src/index.js",
     "types": "src/index.d.ts",
     "engines": {
-        "node": ">=18.0.0"
+        "node": ">=22"
     },
     "repository": {
         "url": "https://github.com/simonecorsi/skaffoldo"
