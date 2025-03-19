@@ -1,3 +1,21 @@
+# [2.0.0](https://github.com/simonecorsi/skaffoldo/compare/v1.2.0...v2.0.0) (2025-03-19)
+
+
+### Bug Fixes
+
+* rimraf new named export ([ab61757](https://github.com/simonecorsi/skaffoldo/commit/ab61757e8a9adc051d12c5c2a5d24769dad14779))
+* rimraf now returns promises ([027acdd](https://github.com/simonecorsi/skaffoldo/commit/027acdd81ab381b1dad5fa7f106f03a4d407cdde))
+
+
+### Features
+
+* node v22 ([44df91d](https://github.com/simonecorsi/skaffoldo/commit/44df91dec638acacb7d2c4bf507bdba4bf2d5841))
+
+
+### BREAKING CHANGES
+
+* moving to interop module
+
 # [1.2.0](https://github.com/simonecorsi/skaffoldo/compare/v1.1.0...v1.2.0) (2023-01-11)
 
 
